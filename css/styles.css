@@ -1,0 +1,72 @@
+body {
+	background-color: #23272A;
+}
+
+*:focus {
+	box-shadow: 0 0 0 0!important;
+}
+
+.toolbar {
+	position: fixed;
+	width: 100%;
+	height: 36px;
+	padding: 3px 0px;
+	background-color: #2C2F33;
+	display: flex;
+	justify-content: center;
+	-webkit-app-region: drag;
+}
+
+.toolbar-left {
+	display: flex;
+	flex: 1;
+}
+
+.toolbar-right {
+	display: flex;
+	justify-content: flex-end;
+	flex: 1;
+}
+
+.toolbar-group {
+	margin: 0px 3px;
+}
+
+.toolbar-button {
+	width: 30px;
+	-webkit-app-region: no-drag;
+}
+
+.btn-outline-primary {
+	border-color: #7289DA;
+	color: #7289DA;
+}
+
+#main {
+	position: absolute;
+	top: 36px;
+	width: 100%;
+	height: 100%;
+}
+
+.parameter {
+	width: 88px !important;
+}
+
+.btn-outline-primary.active, .btn-outline-primary:hover {
+	background-color: #7289DA;
+	border-color: #7289DA;
+}
+
+.no-hover {
+    color: #7289DA !important;
+    background-color: transparent !important;
+}
+
+.hideCursor {
+	cursor: none;
+}
+
+/*.toolbar-button:hover:not(.active) {
+background-color: transparent;
+}*/

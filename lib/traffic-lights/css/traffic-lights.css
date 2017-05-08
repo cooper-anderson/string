@@ -1,0 +1,68 @@
+.traffic-lights, .win-buttons {
+    pointer-events: auto
+}
+
+.traffic-lights {
+    text-align: left;
+    /*padding: 0px 12px 0px 12px;*/
+    cursor: default !important;
+    /*margin: 0px 12px 0px 29px;
+    width: 94px;*/
+    overflow: hidden;
+}
+
+.traffic-lights>button:first-child {
+    margin-left: 12px;
+}
+
+.traffic-lights>button:last-child {
+    margin-right: 12px;
+}
+
+.traffic-lights.osx-buttons-notice {
+    top: 50px
+}
+
+.traffic-lights button {
+    outline:none !important;
+    border: none !important;
+    width: 12px;
+    height: 12px;
+    -webkit-border-radius: 6px;
+    border-radius: 6px;
+    -webkit-background-clip: padding;
+    -moz-background-clip: padding;
+    background-clip: padding-box;
+    background-color: #535559;
+    -webkit-transition: background-color .2s;
+    -moz-transition: background-color .2s;
+    -o-transition: background-color .2s;
+    -ms-transition: background-color .2s;
+    transition: background-color .2s;
+    opacity: .7;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=70)";
+    filter: alpha(opacity=70);
+    border: 0;
+}
+
+.traffic-lights button:hover {
+    opacity: 1;
+    -ms-filter: none;
+    filter: none;
+}
+
+.traffic-lights button + button {
+    margin-left: 4px;
+}
+
+:hover .osx-close {
+    background-color: #fb615b !important
+}
+
+:hover .osx-minimize {
+    background-color: #fdbd41 !important
+}
+
+:hover .osx-maximize {
+    background-color: #33c749 !important
+}
