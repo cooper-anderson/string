@@ -51,6 +51,7 @@ body {
 
 .parameter {
 	width: 88px !important;
+	-webkit-app-region: no-drag;
 }
 
 .btn-outline-primary.active, .btn-outline-primary:hover {

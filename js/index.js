@@ -20,7 +20,7 @@ $(".toolbar-button").on("click", function() {
 	function setActive(name, value) {return (value) ? $(`.toolbar-button-${name}`).addClass("active") : $(`.toolbar-button-${name}`).removeClass("active");}
 
 	let name = $(this).data("name");
-	if (["getBezier", "getLines", "getCircles"].includes(name) && true) {
+	if (["getBezier", "getLines", "getCircles", "getCatmullRom"].includes(name) && true) {
 		$(".toolbar-group-tools>button").removeClass("active");
 		setActive(name, true);
 		renderMode = name;
@@ -33,6 +33,26 @@ $(".toolbar-button").on("click", function() {
 			setActive("mouse", true);
 			$(`.toolbar-button-mouse`).removeClass("no-hover");
 			$("#main").removeClass("hideCursor");
+		}
+	} else if (name == "gravity") {
+		if (isActive("gravity")) {
+			setActive("gravity", false);
+			$(`.toolbar-button-gravity`).addClass("no-hover");
+			string.useGravity = false;
+		} else {
+			setActive("gravity", true);
+			$(`.toolbar-button-gravity`).removeClass("no-hover");
+			string.useGravity = true;
+		}
+	} else if (name == "wind") {
+		if (isActive("wind")) {
+			setActive("wind", false);
+			$(`.toolbar-button-wind`).addClass("no-hover");
+			string.useWind = false;
+		} else {
+			setActive("wind", true);
+			$(`.toolbar-button-wind`).removeClass("no-hover");
+			string.useWind = true;
 		}
 	}
 });

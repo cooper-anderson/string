@@ -22,10 +22,13 @@
 				<button type="button" class="btn btn-outline-primary toolbar-button toolbar-button-getBezier active" data-name="getBezier">1</button>
 				<button type="button" class="btn btn-outline-primary toolbar-button toolbar-button-getLines" data-name="getLines">2</button>
 				<button type="button" class="btn btn-outline-primary toolbar-button toolbar-button-getCircles" data-name="getCircles">3</button>
+				<button type="button" class="btn btn-outline-primary toolbar-button toolbar-button-getCatmullRom" data-name="getCatmullRom">4</button>
 			</div>
 		</div>
 		<div class="btn-group btn-group-sm toolbar-group toolbar-group-playback" role="group" aria-label="Basic example">
 			<button type="button" class="btn btn-outline-primary toolbar-button toolbar-button-mouse active" data-name="mouse"><i class="fa fa-mouse-pointer" aria-hidden="true"></i></button>
+			<button type="button" class="btn btn-outline-primary toolbar-button toolbar-button-gravity" data-name="gravity"><i class="fa fa-arrow-down" aria-hidden="true"></i></button>
+			<button type="button" class="btn btn-outline-primary toolbar-button toolbar-button-wind" data-name="wind"><i class="fa fa-wheelchair-alt" aria-hidden="true"></i></button>
 		</div>
 		<div class="toolbar-right">
 			<form class="form-inline">
@@ -60,6 +63,8 @@
 			});
 		}
 	</script>
+	<script src="js/perlin.js"></script>
+	<script src="js/spline.js"></script>
 	<script src="js/vectors.js"></script>
 	<script src="js/color.js"></script>
 	<script src="js/string.js"></script>
