@@ -67,6 +67,14 @@ $(document).on("keydown", function(data) {
 		$("#count").val(Number($("#count").val()) - 1);
 	} else if (key == "ArrowRight") {
 		$("#count").val(Number($("#count").val()) + 1);
+	} else if (key > 0 && key <= $(".toolbar-group-tools").children().length) {
+		$(`.toolbar-group-tools>button:nth-child(${key})`).trigger("click");
+	} else if (key == 'q') {
+		$(".toolbar-button-mouse").trigger("click");
+	} else if (key == 'w') {
+		$(".toolbar-button-gravity").trigger("click");
+	} else if (key == 'e') {
+		$(".toolbar-button-wind").trigger("click");
 	}
 });
 
