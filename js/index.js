@@ -1,7 +1,7 @@
 
 let string = new String(51, 2);
 let mouse = new Vector2();
-let renderMode = "getBezier";
+let renderMode = "getCatmullRom";
 
 $("#main").on("mousemove", function(data) {
 	mouse = new Vector2(data.offsetX, data.offsetY);
@@ -54,6 +54,19 @@ $(".toolbar-button").on("click", function() {
 			$(`.toolbar-button-wind`).removeClass("no-hover");
 			string.useWind = true;
 		}
+	}
+});
+
+$(document).on("keydown", function(data) {
+	let key = data.key;
+	if (key == "ArrowUp") {
+		$("#distance").val(Number($("#distance").val()) + 1);
+	} else if (key == "ArrowDown") {
+		$("#distance").val(Number($("#distance").val()) - 1);
+	} else if (key == "ArrowLeft") {
+		$("#count").val(Number($("#count").val()) - 1);
+	} else if (key == "ArrowRight") {
+		$("#count").val(Number($("#count").val()) + 1);
 	}
 });
 
